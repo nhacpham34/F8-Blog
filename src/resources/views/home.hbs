@@ -1,1 +1,20 @@
-<h1>home page</h1>
+<div class="mt4">
+    <div class="row">
+        {{#each product}}
+        <div class="col-sm-6 col-lg-4">
+            <div class="card card-product-item ">
+                <a href="/product/{{this.slug}}">
+                    <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
+                </a>
+                <div class="card-body">
+                    <a href="/product/{{this.slug}}">
+                        <h5 class="card-title product-item__name">{{this.name}}</h5>
+                    </a>
+                    <p class="card-text product-item__description">{{this.description}}</p>
+                    <a href="#" class="btn btn-primary">Add Buy</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
